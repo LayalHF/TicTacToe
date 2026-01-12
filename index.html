@@ -8,7 +8,10 @@
   </head>
   <body>
     <header>
-      <img src="./game-logo.png" alt="Hand-drawn Tic tac toe game board" />
+      <img src={`${import.meta.env.BASE_URL}game-logo.png`}
+  alt="Hand-drawn Tic tac toe game board"
+  loading="lazy"
+  decoding="async" />
       <h1>Tic-Tac-Toe</h1>
     </header>
     <div id="root"></div>
