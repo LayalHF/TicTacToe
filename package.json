@@ -1,7 +1,7 @@
 {
   "name": "react-essentials-deep-dive-adv",
   "private": true,
-  "homepage": "https://LayalHF.github.io/TicTacToe",
+  "homepage": "https://LayalHF.github.io/TicTacToe/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -10,7 +10,7 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "react": "^19.0.0",
