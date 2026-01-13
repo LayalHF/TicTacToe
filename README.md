@@ -1,2 +1,2 @@
-# React-Demo-Projects
-A TicTacToe Demo made with react.
+# React-Prototpe-TicTacToe
+A TicTacToe Prototype made with react. Still underdevelopment.
