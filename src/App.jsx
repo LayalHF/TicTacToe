@@ -94,7 +94,7 @@ function App() {
     <>
       <Header />
       <main className="grid place-items-center">
-        <div id="game-container" className="w-fit max-w-[92vw] rounded-xl px-3 py-5 md:p-6 shadow-lg">
+        <div id="game-container" className="w-fit max-w-[92vw] rounded-xl px-3 py-5 md:p-15 shadow-lg">
           <ol id="players" className="highlight-player pb-5 flex">
             <Player intialName={PLAYERS.X} symbol="X" isActive={activePlayer === 'X'} onChangeName={handlePlayerNameChange} />
             <Player intialName={PLAYERS.O} symbol="O" isActive={activePlayer === 'O'} onChangeName={handlePlayerNameChange} />
