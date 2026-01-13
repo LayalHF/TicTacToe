@@ -4,6 +4,7 @@ import GameBoard from "./components/GameBoard.jsx";
 import Log from "./components/Log.jsx";
 import GameOver from "./components/GameOver.jsx";
 import { WINNING_COMBINATIONS } from "./winning-combinations.js"
+import Header from "./components/Header.jsx";
 
 const PLAYERS = {
   X: 'Player 1',
@@ -90,17 +91,20 @@ function App() {
     });
   }
   return (
-    <main>
-      <div id="game-container">
-        <ol id="players" className="highlight-player">
-          <Player intialName={PLAYERS.X} symbol="X" isActive={activePlayer === 'X'} onChangeName={handlePlayerNameChange} />
-          <Player intialName={PLAYERS.O} symbol="O" isActive={activePlayer === 'O'} onChangeName={handlePlayerNameChange} />
-        </ol>
-        {(winner || hasDraw) && <GameOver winner={winner} onRestart={handleRestart} />}
-        <GameBoard onSelectSquare={handleSelectSquare} board={gameBoard} />
-      </div>
-      <Log turns={gameTurns} />
-    </main>
+    <>
+      <Header />
+      <main className="grid place-items-center">
+        <div id="game-container" className="w-fit max-w-[92vw] rounded-xl px-3 py-5 md:p-6 shadow-lg">
+          <ol id="players" className="highlight-player pb-5 flex">
+            <Player intialName={PLAYERS.X} symbol="X" isActive={activePlayer === 'X'} onChangeName={handlePlayerNameChange} />
+            <Player intialName={PLAYERS.O} symbol="O" isActive={activePlayer === 'O'} onChangeName={handlePlayerNameChange} />
+          </ol>
+          {(winner || hasDraw) && <GameOver winner={winner} onRestart={handleRestart} />}
+          <GameBoard onSelectSquare={handleSelectSquare} board={gameBoard} />
+        </div>
+        <Log turns={gameTurns} />
+      </main>
+    </>
   );
 }
 
