@@ -9,6 +9,6 @@ Notable features include:
 - fully responsive, and scales proportionally to small  devices.
 - Two-player rounds
 
-  Setup:
+Setup:
   - Vite build tool
   - used npm to install/update/manage modules
